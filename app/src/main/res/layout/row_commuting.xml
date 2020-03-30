@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:id="@+id/commutingIcon"
+        app:srcCompat="@drawable/ic_work_black_24dp"
+        android:tint="@color/colorAccent"
+        android:layout_alignParentStart="true" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/commutingType"
+        android:text="ورود"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:srcCompat="@drawable/ic_work_black_24dp"
+        android:tint="@color/colorAccent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:layout_toEndOf="@id/commutingIcon"
+        android:layout_toStartOf="@id/commutingType"
+        android:id="@+id/commutingTime"
+        android:text="1399-12-15 15:14:13"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:srcCompat="@drawable/ic_work_black_24dp"
+        android:tint="@color/colorAccent" />
+
+
+</RelativeLayout>

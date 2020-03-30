@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_background"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/contentParent"
+            android:layout_margin="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="196dp"
+                android:layout_height="196dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/logo_rah"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ورود به نرم افزار"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <View android:layout_height="4dp"
+                android:layout_width="140dp"
+                android:layout_margin="8dp"
+                android:background="@color/colorPrimary"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:hint="آدرس سرور"
+                style="@style/style_input"
+                android:id="@+id/url"/>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:hint="توکن"
+                style="@style/style_input"
+                android:id="@+id/token"
+                android:singleLine="true"
+                android:imeOptions="actionDone"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="ورود"
+                style="@style/style_input"
+                android:background="@drawable/bg_submit"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:padding="12dp"
+                android:paddingStart="48dp"
+                android:paddingEnd="48dp"
+                android:id="@+id/login"
+                />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_progress" />
+
+</RelativeLayout>

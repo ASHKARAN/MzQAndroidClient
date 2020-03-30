@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/update" android:title="بروزرسانی اطلاعات"
+        android:icon="@drawable/ic_autorenew_black_24dp"
+        />
+
+      <item android:id="@+id/about" android:title="درباره ما"
+        android:icon="@drawable/ic_info_outline_white_24dp"
+        />
+      <item android:id="@+id/contact" android:title="تماس با ما"
+        android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+        />
+      <item android:id="@+id/logout" android:title="خروج"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        />
+
+
+
+</menu>

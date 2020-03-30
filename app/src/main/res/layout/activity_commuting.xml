@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/background_light"
+    tools:context=".ui.CommutingActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/title"
+                android:layout_toEndOf="@+id/search"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="نام شخص"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
+                android:padding="16dp"
+                android:id="@+id/back"
+                android:layout_alignParentStart="true"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/toolbar"
+        android:weightSum="2"
+        android:id="@+id/inout"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ثبت خروج"
+            android:gravity="center"
+            android:background="@drawable/bg_red"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:id="@+id/out"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ثبت ورود"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/bg_submit"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:id="@+id/in"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_below="@+id/inout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/main.appbar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fitsSystemWindows="true"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/main.collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleMarginEnd="64dp"
+                >
+
+                <RelativeLayout
+                    android:background="@android:color/background_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@android:color/background_light">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="8dp">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="48dp"
+                                            android:orientation="horizontal"
+                                            android:layout_toEndOf="@+id/finger"
+                                            android:weightSum="2">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_weight="1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="2170135478"
+                                                android:textColor="@color/black"
+
+                                                android:textSize="18sp"
+                                                android:gravity="left|center_vertical"
+                                                android:paddingLeft="8dp"
+                                                android:textStyle="bold"
+                                                android:id="@+id/ID"/>
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/black"
+
+                                                android:id="@+id/fNamelName"
+                                                android:textSize="18sp"
+                                                android:text="محمد رجبیان نصب پور غلامی"
+                                                android:layout_weight="1"
+                                                android:gravity="right|center_vertical"
+                                                android:paddingRight="8dp"
+                                                android:layout_alignParentEnd="true"/>
+
+                                        </LinearLayout>
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="32dp"
+                                            android:layout_height="48dp"
+                                            app:srcCompat="@drawable/ic_fingerprint_black_24dp"
+                                            android:tint="@color/colorAccent"
+                                            android:padding="4dp"
+                                            android:id="@+id/finger"/>
+
+                                    </RelativeLayout>
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" >
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="48dp"
+                                            android:orientation="horizontal"
+                                            android:layout_toEndOf="@+id/locationImage"
+                                            android:weightSum="2">
+
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_weight="1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="شغل"
+                                                android:gravity="left|center_vertical"
+                                                android:textStyle="bold"
+                                                android:paddingLeft="8dp"
+                                                android:textSize="18sp"
+                                                android:textColor="@color/black"
+                                                android:id="@+id/office"/>
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:textStyle="bold"
+                                                android:id="@+id/father"
+                                                android:textSize="18sp"
+                                                android:text="فرزند محمد علی"
+                                                android:layout_weight="1"
+                                                android:textColor="@color/black"
+
+                                                android:gravity="right|center_vertical"
+                                                android:paddingRight="8dp"
+                                                android:layout_alignParentEnd="true"/>
+
+
+                                        </LinearLayout>
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="32dp"
+                                            android:layout_height="48dp"
+                                            android:tint="@color/colorAccent"
+                                            android:padding="4dp"
+                                            app:srcCompat="@drawable/ic_work_black_24dp"
+                                            android:id="@+id/locationImage"/>
+
+                                    </RelativeLayout>
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" >
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="توضیحات\nتوضیحات"
+                                            android:textStyle="bold"
+                                            android:padding="8dp"
+                                            android:maxLines="2"
+                                            android:lineSpacingExtra="10dp"
+                                            android:paddingLeft="8dp"
+                                            android:textColor="@color/black"
+
+                                            android:textSize="18sp"
+                                            android:id="@+id/comments"/>
+
+
+
+
+                                    </RelativeLayout>
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" >
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="48dp"
+                                            android:orientation="horizontal"
+                                            android:layout_toEndOf="@+id/plaqueImage"
+                                            android:weightSum="2">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_weight="1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="72ق547 ایران 54"
+                                                android:gravity="left|center_vertical"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/black"
+                                                android:paddingLeft="8dp"
+                                                android:textSize="18sp"
+                                                android:id="@+id/plaque"/>
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_weight="1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="نام شهر"
+                                                android:gravity="center_vertical"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/black"
+                                                android:padding="8dp"
+                                                android:textSize="18sp"
+                                                android:id="@+id/city"/>
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:layout_width="32dp"
+                                            android:layout_height="48dp"
+                                            android:src="@drawable/plaque"
+                                            android:id="@+id/plaqueImage"/>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_hideable="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/detailsBottomSheet">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"/>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <ProgressBar android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarInline"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"/>
+
+</RelativeLayout>
